@@ -1,0 +1,92 @@
+1618589675a:1:{s:12:"about-us.htm";a:10:{s:8:"fileName";s:12:"about-us.htm";s:7:"content";s:1333:"title = "About Us"
+url = "/about.php"
+layout = "secondary"
+is_hidden = 0
+
+[builderList]
+modelClass = "Northamericanweb\Abouts\Models\About"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "description"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<div class="bodycontent text-center">
+  <div class="container">
+    <h1 class="page-title04">About Project Experts</h1>
+    <hr class="hr"/>
+
+    <p class="text-center"<ul class="record-list">
+    {% for record in records %}
+       
+            {% spaceless %}
+                {% if detailsPage %}
+                    
+                {% endif %}
+
+               {{ record.description|raw }}
+
+                {% if detailsPage %}
+                 
+                {% endif %}
+            {% endspaceless %}
+       
+    {% else %}
+       
+    {% endfor %}
+
+
+</p>
+  </div>
+
+
+</div>
+{% partial 'site/services' %}
+
+{% partial 'site/feat'  %}";s:5:"mtime";i:1618079809;s:6:"markup";s:995:"{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<div class="bodycontent text-center">
+  <div class="container">
+    <h1 class="page-title04">About Project Experts</h1>
+    <hr class="hr"/>
+
+    <p class="text-center"<ul class="record-list">
+    {% for record in records %}
+       
+            {% spaceless %}
+                {% if detailsPage %}
+                    
+                {% endif %}
+
+               {{ record.description|raw }}
+
+                {% if detailsPage %}
+                 
+                {% endif %}
+            {% endspaceless %}
+       
+    {% else %}
+       
+    {% endfor %}
+
+
+</p>
+  </div>
+
+
+</div>
+{% partial 'site/services' %}
+
+{% partial 'site/feat'  %}";s:4:"code";N;s:5:"title";s:8:"About Us";s:3:"url";s:10:"/about.php";s:6:"layout";s:9:"secondary";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:8:{s:10:"modelClass";s:36:"Northamericanweb\Abouts\Models\About";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:11:"description";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

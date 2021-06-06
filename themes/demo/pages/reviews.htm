@@ -1,0 +1,146 @@
+title = "Reviews"
+url = "/reviews"
+layout = "secondary"
+is_hidden = 0
+
+[builderList]
+modelClass = "Northamericanweb\Reviews\Models\Review"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<?php
+function onStart(){
+
+if(isset($_POST['name']))
+{    
+     $name = $_POST['name'];
+     $email = $_POST['email'];
+     $review = $_POST['description'];
+     $stars = $_POST['rating'];
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $visible = 0;
+    $dbname = "proexp";
+    if($stars>=4){
+        $visible=1;
+    }
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO northamericanweb_reviews_(name, review, stars,email,visible)
+    VALUES ('$name', '$review', '$stars','$email',$visible)";
+
+    if ($conn->query($sql) === TRUE) {
+      echo "<script>alert('Your Review has been sent.');</script>";
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+
+}
+?>
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+
+<div class="bodycontent">
+  <div class="container">
+    <div class="row clearfix">
+            		<div class="col-md-8 col-sm-12 col-xs-12 block">
+                      <h1 class="page-title04">Customer Reviews</h1>
+                      <hr class="hr" style="margin:0 0 30px;" />
+                      {% for record in records %}
+                        {% if record.visible %}
+                        <div class="reviewbox">
+                          <div class="title clearfix">
+                            <div class="pull-left">{{record.name}}</div>
+                            <div class="pull-right">
+                            {% for i in 1..record.stars %}
+                                                          <i class="fa fa-star"></i>
+                                            
+                            {%endfor%}
+                            </div>
+                          </div>
+                          <div class="pgtxt">
+                          {{ record.review|raw }}
+                </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                
+              <div class="col-md-4 col-sm-12 col-xs-12">
+               	  
+                    
+                  <div class="rev-frm">
+        <div class="frmtitle">Send Your Reviews</div>
+        <div class="frm">
+                  <form id="form" name="form" enctype="multipart/form-data" method="post" action="" > 
+            <div class="form-group">
+              <label for="name" > Name</label>
+              <input type="text" class="required form-control" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" >Email</label>
+              <input type="email" class="required email form-control"  name="email" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="description" > Comment:</label>
+              <textarea class="required form-control"  id="description" name="description" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label > Rate:</label>
+              <br>
+              <input type="radio" value="1" name="rating" id="rating">
+              &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <br>
+              <input type="radio" value="2" name="rating" id="rating">
+              &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <br>
+              <input type="radio" value="3" name="rating" id="rating">
+              &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <br>
+              <input type="radio" value="4" name="rating" id="rating">
+              &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <br>
+              <input type="radio" value="5" checked name="rating" id="rating">
+              &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <i class="fa fa-star txt-color"></i> &nbsp; <br>
+            </div>
+            <div class="row clearfix">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+           <label > Captcha:</label>
+            <div class="form-group"> <img src="{{ 'captcha'|page }}" /> </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+             
+               <input name="captcha"  type="text" class="form-control required" title="" maxlength="5" autocomplete="off" placeholder="Please enter the code" />
+            </div>
+          </div>
+        </div>
+            <input type="submit" value="Submit Now" name="commit" class="btn btn-warning">
+          </form>
+           
+        </div>
+      </div>
+
+                </div>
+            </div>
+    
+  </div>
+</div>

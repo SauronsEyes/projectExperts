@@ -1,0 +1,12 @@
+title: Pages
+modelClass: Northamericanweb\Pages\Models\Page
+list: $/northamericanweb/pages/models/page/columns.yaml
+recordUrl: 'northamericanweb/pages/pages/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,42 @@
+<div class="app landing-background">
+    <div class="logo home-link">
+        <img src="/plugins/visa/visitoranalytics/assets/images/va-logo.svg">
+    </div>
+    <div class="register-wrapper">
+        <div class="box popup-box card-white">
+            <h4 class="popup-title"><?= e(trans('visa.visitoranalytics::lang.forms.login_title')) ?></h4>
+            <div class="popup-content">
+                <?= Form::open(['file' => TRUE, 'class' => 'layout register-form action_login', 'data-request' => 'onUserLogin']) ?>
+                    <div class="input-fields-area">
+                        <div class="custom-input">
+                            <img class="icon" src="/plugins/visa/visitoranalytics/assets/images/forms/message.svg">
+                            <?= Form::label('email', e(trans('visa.visitoranalytics::lang.forms.email'))) ?>
+                            <?= Form::email('email', $email, ['required', 'class' => 'notification-input']) ?>
+                        </div>
+                        <div class="custom-input">
+                            <img class="icon" src="/plugins/visa/visitoranalytics/assets/images/forms/password.svg">
+                            <?= Form::label('password', e(trans('visa.visitoranalytics::lang.forms.password'))) ?>
+                            <?= Form::input('password', 'password', '', ['required', 'class' => 'notification-input']) ?>
+                        </div>
+                    </div>
+                    <div class="forgot-password-link">
+                        <a href="https://app.visitor-analytics.io/password/forgot" target="_blank"><?= e(trans('visa.visitoranalytics::lang.forms.forgot_password')) ?></a>
+                    </div>
+                    <div class="button-area">
+                        <?= Form::submit(e(trans('visa.visitoranalytics::lang.forms.login_button')), ['class' => 'button theme-green']) ?>
+                        <div class="register-link-container">
+                            <?= trans('visa.visitoranalytics::lang.forms.no_account') ?>
+                        </div>
+                    </div>
+                <?= Form::close() ?>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chat window -->
+<script>
+    window.intercomSettings = {
+        app_id: "kjwzpnq0"
+    };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/kjwzpnq0';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>

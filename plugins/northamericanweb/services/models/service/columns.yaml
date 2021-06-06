@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: Service
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: 'Description '
+        type: text
+        searchable: true
+        sortable: true

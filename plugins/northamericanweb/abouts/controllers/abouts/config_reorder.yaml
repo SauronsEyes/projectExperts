@@ -1,0 +1,4 @@
+title: Abouts
+modelClass: Northamericanweb\Abouts\Models\About
+toolbar:
+    buttons: reorder_toolbar

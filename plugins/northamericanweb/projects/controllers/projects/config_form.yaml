@@ -1,0 +1,10 @@
+name: Projects
+form: $/northamericanweb/projects/models/project/fields.yaml
+modelClass: Northamericanweb\Projects\Models\Project
+defaultRedirect: northamericanweb/projects/projects
+create:
+    redirect: 'northamericanweb/projects/projects/update/:id'
+    redirectClose: northamericanweb/projects/projects
+update:
+    redirect: northamericanweb/projects/projects
+    redirectClose: northamericanweb/projects/projects

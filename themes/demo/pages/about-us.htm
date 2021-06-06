@@ -1,0 +1,54 @@
+title = "About Us"
+url = "/about.php"
+layout = "secondary"
+is_hidden = 0
+
+[builderList]
+modelClass = "Northamericanweb\Abouts\Models\About"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "description"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<div class="bodycontent text-center">
+  <div class="container">
+    <h1 class="page-title04">About Project Experts</h1>
+    <hr class="hr"/>
+
+    <p class="text-center"<ul class="record-list">
+    {% for record in records %}
+       
+            {% spaceless %}
+                {% if detailsPage %}
+                    
+                {% endif %}
+
+               {{ record.description|raw }}
+
+                {% if detailsPage %}
+                 
+                {% endif %}
+            {% endspaceless %}
+       
+    {% else %}
+       
+    {% endfor %}
+
+
+</p>
+  </div>
+
+
+</div>
+{% partial 'site/services' %}
+
+{% partial 'site/feat'  %}

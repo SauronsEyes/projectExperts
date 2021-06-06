@@ -1,0 +1,114 @@
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project Experts - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+       
+        <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}">
+        <!--<link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">-->
+        <link rel="stylesheet" href="{{ 'assets/bootstrap/css/bootstrap.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/font-awesome/css/font-awesome.css'|theme }}">
+      
+        <link href="{{ 'assets/css/error.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/main.css'|theme }}" rel="stylesheet">
+       
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        
+        <header id="layout-header">
+            {% partial 'site/topheader' %}
+             {% partial 'site/innerinfo' %}
+        </header>
+         <!-- Banner-->
+       
+       
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        <a id="button" data-toggle="tooltip" data-placement="top" title="Back To Top"></a>
+        <script src="{{ 'assets/js/jquery.min.js'|theme }}"></script> 
+        <script src="{{ 'assets/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+        <script src="{{ 'assets/magnificpopup/jquery.magnific-popup.min.js'|theme }}"></script>
+        <link href="{{ 'assets/magnificpopup/magnific-popup.css'|theme }}" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+<script type="text/javascript">
+$(function(){
+  $('#portfolio').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    image: {
+      cursor: null,
+      titleSrc: 'title'
+    },
+	
+    gallery: {
+      enabled: true,
+      preload: [0,1], // Will preload 0 - before current, and 1 after the current image
+      navigateByImgClick: true
+		}
+  });
+  
+});
+  // Sets interval...what is transition slide speed?
+    $('#bannerCarousel').carousel({
+    interval: 2000
+});
+
+</script>
+
+ <script src="{{ 'assets/js/jquery.validate.js'|theme }}"></script>
+<link href="{{ 'assets/css/errors.css'|theme }}" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        $().ready(function() {
+        var btn = $('#button');
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+            } else {
+            btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+
+
+                $("#form").validate();
+
+            });
+		</script>
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

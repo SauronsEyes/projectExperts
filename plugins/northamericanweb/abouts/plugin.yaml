@@ -1,0 +1,11 @@
+plugin:
+    name: 'northamericanweb.abouts::lang.plugin.name'
+    description: 'northamericanweb.abouts::lang.plugin.description'
+    author: northamericanweb
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: About
+        url: northamericanweb/abouts/abouts
+        icon: icon-user

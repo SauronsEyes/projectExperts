@@ -1,0 +1,11 @@
+plugin:
+    name: 'northamericanweb.projects::lang.plugin.name'
+    description: 'northamericanweb.projects::lang.plugin.description'
+    author: northamericanweb
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Projects
+        url: northamericanweb/projects/projects
+        icon: icon-briefcase

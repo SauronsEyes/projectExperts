@@ -1,0 +1,11 @@
+name: Services
+modelClass: Northamericanweb\Services\Models\Service
+form: $/northamericanweb/services/models/service/fields.yaml
+defaultRedirect: northamericanweb/services/services
+create:
+    redirect: 'northamericanweb/services/services/update/:id'
+    redirectClose: northamericanweb/services/services
+update:
+    redirect: northamericanweb/services/services
+    redirectClose: northamericanweb/services/services
+preview: {  }

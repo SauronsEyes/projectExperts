@@ -1,0 +1,157 @@
+title = "Quote"
+url = "/quote"
+layout = "secondary"
+is_hidden = 0
+==
+<div class="bodycontent">
+  <div class="container">
+    <h1 class="page-title04 text-center">Get A Free Quote</h1>
+    <hr class="hr"/>
+    <div class="row clearfix">
+               	<div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+                	<div class="reviewbox"><form action="{{ 'quotemail'|page }}" method="post" enctype="multipart/form-data" name="form" id="form">
+        <div class="row">
+        <br>
+
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>* First Name:</label>
+               <input name="fullname" type="text" class="form-control input-lg required"  title="" id="fullname"/>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>* Last Name:</label>
+              <input name="lastname" type="text" class="form-control input-lg required"  title="" id="lastname"/>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+              <label>* Full Address:</label>
+              <input name="streetaddress" type="text" class="form-control input-lg required"  title="" id="streetaddress"/>
+            
+            </div>
+        
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>* Cell Number:</label>
+              <input name="cellnumb" type="text" class="form-control input-lg required digits"  title="" id="cellnumb"/> 
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>Phone Number:</label>
+              <input name="phone" type="text" class="form-control input-lg" title="" id="phone"/> 
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="row">
+          
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>* Email:</label>
+              <input name="email" type="text" class="form-control input-lg required email"  id="email" />
+            </div>
+          </div><div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>Estimated Budget:</label>
+              <input name="budget" type="text" class="form-control input-lg"  title="" id="budget"/> 
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+			<label>Looking For: <span class="clr-txt">*</span></label>
+            <p>
+             <label style="font-weight:normal;">
+                <input type="radio" name="looking" value="Residential" id="looking" checked>
+                Residential</label> &nbsp; &nbsp; &nbsp; 
+            
+              <label style="font-weight:normal;">
+                <input type="radio" name="looking" value="Commercial" id="looking" >
+                Commercial</label> &nbsp; &nbsp; &nbsp; 
+             
+          
+            </p>
+            
+            
+            </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>* Types Of Service:</label>
+               <input name="requiredcourses" type="text" class="form-control input-lg required"  title="" id="requiredcourses"/> 
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>When would you like to start?:</label>
+              <input name="startdate" type="text" class="form-control input-lg"  title="" id="startdate"/>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+
+
+
+
+              <label>Best Time To Call:</label>
+              <select id="time" name="time" class="form-control input-lg">
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label>* Message Topic:</label>
+            <input name="mesgtopic" type="text" class="form-control input-lg required"  title="" id="mesgtopic"/>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>* Special Requirements / Message:</label>
+           <textarea  id="message" name="message"  class="form-control input-lg required" style="height:130px;"></textarea>  
+            </div>
+          </div>
+          
+          <div class="clearfix"></div>
+        </div>
+        
+       
+        
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label for="pwd"><span>* </span>Security Code:</label>
+              <br>
+               <img src="{{ 'captcha'|page }}" /><br>
+<br>
+
+               <input name="captcha"  type="text" class="form-control required" title="" maxlength="5" autocomplete="off" placeholder="Please enter the code" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="btn btn-success" type="submit" value="Submit Now">
+        </div>
+      </form></div>
+                </div>
+               </div>
+    
+  </div>
+</div>
+ {% partial 'site/testi'  %}

@@ -1,0 +1,29 @@
+fields:
+    title:
+        label: Text
+        span: left
+        type: text
+    servicon:
+        label: 'Service Icon'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+    description:
+        label: 'Rich editor'
+        size: huge
+        span: full
+        type: richeditor
+    servimg:
+        label: 'Upload Image'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

@@ -1,0 +1,38 @@
+title = "Service Single"
+url = "/services/:id"
+layout = "secondary"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Northamericanweb\Services\Models\Service"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+<div class="bodycontent">
+  <div class="container">
+    <h1 class="page-title04 text-center">{{ record.title }}</h1>
+    <hr class="hr"/>
+    <div class="row clearfix">
+      <div class="col-md-8 col-sm-8 block">
+       <p>
+        {{ record.description|raw }}
+ </p>
+      </div>
+      <div class="col-md-4 col-sm-4 img-holder">
+        <img src="{{ record.servimg.path }}" alt="" width="100%">
+      </div>
+    
+
+    </div>
+  
+   
+   
+  </div>
+</div>

@@ -1,0 +1,11 @@
+title: Abouts
+modelClass: Northamericanweb\Abouts\Models\About
+list: $/northamericanweb/abouts/models/about/columns.yaml
+recordUrl: 'northamericanweb/abouts/abouts/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

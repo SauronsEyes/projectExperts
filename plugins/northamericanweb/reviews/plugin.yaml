@@ -1,0 +1,11 @@
+plugin:
+    name: 'northamericanweb.reviews::lang.plugin.name'
+    description: 'northamericanweb.reviews::lang.plugin.description'
+    author: northamericanweb
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    Reviews:
+        label: Reviews
+        url: northamericanweb/reviews/reviews
+        icon: icon-comment

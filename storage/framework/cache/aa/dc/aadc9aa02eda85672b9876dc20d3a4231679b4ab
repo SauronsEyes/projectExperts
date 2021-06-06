@@ -1,0 +1,152 @@
+1618589675a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:3124:"title = "Homepage"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Northamericanweb\Abouts\Models\About"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "description"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+
+<div class="bodycontent02">
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-7 col-sm-7 block">
+					<div class="txt1"><span>&nbsp;</span> About Project Experts</div>
+					<h2 class="page-title">Committed to top quality workmanship, professionalism, and customer satisfaction. </h2>
+					<p>
+            {% for record in records %}
+              {{ record.description|raw }}
+            {% endfor %}
+          </p>
+				
+				</div>
+				<div class="col-md-5 col-sm-5">
+					<div class="rightcol-formbox">
+						<h4 class="title">Quick Enquiry</h4>
+						<form action="{{ 'enqmail' | page}}" method="post" enctype="multipart/form-data" name="form" id="form" novalidate="novalidate">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input name="name" type="text" class="form-control required" placeholder="" value="" title="" aria-required="true">
+            </div>
+             <div class="form-group">
+            <label>Phone Number</label>
+             <input name="phone" type="text" class="form-control required digits" value="" placeholder="" aria-required="true">
+            </div>
+             <div class="form-group">
+            <label>Email</label>
+             <input name="email" type="text" class="form-control required email" value="" placeholder="" aria-required="true">
+            </div>
+           <div class="form-group">
+            <label>Address</label>
+             <input name="address" type="text" class="form-control required" value="" placeholder="" aria-required="true">
+            </div>
+            <div class="form-group">
+               <label>Choose a Service</label>
+				<select class="form-control" name="service">
+						 <option value="Property Maintenance">Property Maintenance</option>
+						 <option value="Roofing">Roofing</option>
+						  <option value="James Hardie">James Hardie</option>
+						   <option value="Installation of Windows & Doors">Installation of Windows & Doors</option>
+				</select>
+            </div>
+            
+           <div style="padding:15px 0 0;"> <input type="submit" value="Submit Now" name="commit" class="btn btn-color"></div>
+          </form>
+					</div>
+				</div>
+			</div>
+ 
+		</div>
+	</div>
+{% partial 'site/services' %}
+
+{% partial 'site/feat'  %}
+<div class="wrap6">
+    {% partial 'site/footerinfo'  %}
+  
+    </div>
+     {% partial 'site/testi'  %}";s:5:"mtime";i:1618158911;s:6:"markup";s:2797:"{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+
+<div class="bodycontent02">
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-7 col-sm-7 block">
+					<div class="txt1"><span>&nbsp;</span> About Project Experts</div>
+					<h2 class="page-title">Committed to top quality workmanship, professionalism, and customer satisfaction. </h2>
+					<p>
+            {% for record in records %}
+              {{ record.description|raw }}
+            {% endfor %}
+          </p>
+				
+				</div>
+				<div class="col-md-5 col-sm-5">
+					<div class="rightcol-formbox">
+						<h4 class="title">Quick Enquiry</h4>
+						<form action="{{ 'enqmail' | page}}" method="post" enctype="multipart/form-data" name="form" id="form" novalidate="novalidate">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input name="name" type="text" class="form-control required" placeholder="" value="" title="" aria-required="true">
+            </div>
+             <div class="form-group">
+            <label>Phone Number</label>
+             <input name="phone" type="text" class="form-control required digits" value="" placeholder="" aria-required="true">
+            </div>
+             <div class="form-group">
+            <label>Email</label>
+             <input name="email" type="text" class="form-control required email" value="" placeholder="" aria-required="true">
+            </div>
+           <div class="form-group">
+            <label>Address</label>
+             <input name="address" type="text" class="form-control required" value="" placeholder="" aria-required="true">
+            </div>
+            <div class="form-group">
+               <label>Choose a Service</label>
+				<select class="form-control" name="service">
+						 <option value="Property Maintenance">Property Maintenance</option>
+						 <option value="Roofing">Roofing</option>
+						  <option value="James Hardie">James Hardie</option>
+						   <option value="Installation of Windows & Doors">Installation of Windows & Doors</option>
+				</select>
+            </div>
+            
+           <div style="padding:15px 0 0;"> <input type="submit" value="Submit Now" name="commit" class="btn btn-color"></div>
+          </form>
+					</div>
+				</div>
+			</div>
+ 
+		</div>
+	</div>
+{% partial 'site/services' %}
+
+{% partial 'site/feat'  %}
+<div class="wrap6">
+    {% partial 'site/footerinfo'  %}
+  
+    </div>
+     {% partial 'site/testi'  %}";s:4:"code";N;s:5:"title";s:8:"Homepage";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:8:{s:10:"modelClass";s:36:"Northamericanweb\Abouts\Models\About";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:11:"description";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}

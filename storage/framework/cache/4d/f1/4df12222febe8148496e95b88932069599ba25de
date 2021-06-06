@@ -1,0 +1,34 @@
+1618589678a:1:{s:15:"site/banner.htm";a:6:{s:8:"fileName";s:15:"site/banner.htm";s:7:"content";s:780:"==
+<div class="banwrap">
+  <div class="banstyle"></div>
+<div class="wrap3">
+  <div id="bannerCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+
+    </div>
+    <div class="carousel-inner" role="listbox">
+    <div class="item active"> <img src="{{ 'assets/images/banner/img1.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img2.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img3.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img4.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img5.jpg'|theme }}" alt=""> </div>
+      
+    </div>
+  </div>
+</div>
+</div>";s:5:"mtime";i:1618073063;s:6:"markup";s:776:"<div class="banwrap">
+  <div class="banstyle"></div>
+<div class="wrap3">
+  <div id="bannerCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+
+    </div>
+    <div class="carousel-inner" role="listbox">
+    <div class="item active"> <img src="{{ 'assets/images/banner/img1.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img2.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img3.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img4.jpg'|theme }}" alt=""> </div>
+      <div class="item"> <img src="{{ 'assets/images/banner/img5.jpg'|theme }}" alt=""> </div>
+      
+    </div>
+  </div>
+</div>
+</div>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

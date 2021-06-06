@@ -1,0 +1,11 @@
+plugin:
+    name: 'northamericanweb.services::lang.plugin.name'
+    description: 'northamericanweb.services::lang.plugin.description'
+    author: northamericanweb
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    Services:
+        label: Services
+        url: northamericanweb/services/services
+        icon: icon-cogs

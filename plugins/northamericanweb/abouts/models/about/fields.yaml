@@ -1,0 +1,6 @@
+fields:
+    description:
+        label: 'About Description'
+        size: huge
+        span: full
+        type: richeditor

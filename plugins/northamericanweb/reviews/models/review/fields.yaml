@@ -1,0 +1,32 @@
+fields:
+    name:
+        label: Name
+        span: left
+        required: 1
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    review:
+        label: Review
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    stars:
+        label: 'Stars (out of 5)'
+        options:
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+        showSearch: true
+        span: auto
+        default: '5'
+        type: dropdown
+    visible:
+        label: 'Review Visible'
+        span: left
+        type: switch

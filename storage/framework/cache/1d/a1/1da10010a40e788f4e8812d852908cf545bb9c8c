@@ -1,0 +1,7 @@
+1618589678a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:231:"<div class="wrap9">
+    <div class="container">Copyright  &copy; <?php echo date('Y');?> Project Experts. All Rights Reserved. <br>
+  Powered By <a href="http://northamericanwebllc.com" target="_blank">NA WEB LLC</a></div>
+  </div>";s:5:"mtime";i:1618073128;s:6:"markup";s:231:"<div class="wrap9">
+    <div class="container">Copyright  &copy; <?php echo date('Y');?> Project Experts. All Rights Reserved. <br>
+  Powered By <a href="http://northamericanwebllc.com" target="_blank">NA WEB LLC</a></div>
+  </div>";s:4:"code";N;}}

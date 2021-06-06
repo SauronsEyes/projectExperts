@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: 'Project Title'
+        type: text
+    proimg:
+        label: Image
+        type: partial
+        path: ~/plugins/northamericanweb/projects/models/project/_img_column.htm

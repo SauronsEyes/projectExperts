@@ -1,0 +1,11 @@
+name: Pages
+modelClass: Northamericanweb\Pages\Models\Page
+form: $/northamericanweb/pages/models/page/fields.yaml
+defaultRedirect: northamericanweb/pages/pages
+create:
+    redirect: 'northamericanweb/pages/pages/update/:id'
+    redirectClose: northamericanweb/pages/pages
+update:
+    redirect: northamericanweb/pages/pages
+    redirectClose: northamericanweb/pages/pages
+preview: {  }

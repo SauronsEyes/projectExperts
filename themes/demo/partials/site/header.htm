@@ -1,0 +1,65 @@
+[builderList]
+modelClass = "Northamericanweb\Pages\Models\Page"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "pages"
+detailsKeyColumn = "title"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+<div class="wrap2">
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="nawrap">
+          <div class="navholder">
+            <div class="logo"><a href="./" title="Project Experts"><img src="{{ 'assets/images/logo.png'|theme }}" alt=""></a> </div>
+            <div class="toptel"><i class="fa fa-phone-square"></i> 780 660 0900 </div>
+            <div class="toptel01"><a href="tel:7806600900"><i class="fa fa-phone-square"></i> Tap To Call Us</a></div>
+            <nav role="navigation" class="navbar navbar-default"> 
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <span class="menutxt">Menu</span> </div>
+              <!-- Collection of nav links, forms, and other content for toggling -->
+              <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="{{ 'home' | page }}" class="active">Home <br>
+                    <span>back to the homepage</span></a> </li>
+                  <li><a href="{{ 'about-us' | page }}" class="menulink">About Us<br>
+                    <span>description about ourself</span></a> </li>
+                  <li><a href="{{ 'Services' | page}}" class="menulink">Services We Provide<br>
+                    <span>what we’re proud of </span></a> </li>
+                  <li><a href="{{ 'projects' | page }}" class="menulink">Our Projects<br>
+                    <span>all work accessible in one place</span></a> </li>
+                  <li><a href="{{ 'quote' | page }}" class="menulink">Get A Free Quote<br>
+                    <span>getting you a free quote</span></a> </li>
+                  <li><a href="{{ 'reviews' | page }}" class="menulink">Reviews<br>
+                    <span>what other say about us</span></a> </li>
+                  <li><a href="{{ 'contact' | page }}" class="menulink">Contact Us<br>
+                    <span>get in touch with us</span></a> </li>
+                  {% for record in records %}
+                    <li><a href="{{ 'pages' | page({ id: record.id })}}" class="menulink">{{ record.title }}</a> </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="navbottom-img"><img src="{{ 'assets/images/menu_back.png'|theme }}" alt=""> </div>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-8 col-xs-12"></div>
+    </div>
+  </div>
+</div>

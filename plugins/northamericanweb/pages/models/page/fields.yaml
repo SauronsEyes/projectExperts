@@ -1,0 +1,19 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    description:
+        label: 'Page Description'
+        size: huge
+        span: full
+        type: richeditor
+    pagepic:
+        label: Photos
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

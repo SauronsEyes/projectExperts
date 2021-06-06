@@ -1,0 +1,5 @@
+title: Reviews
+modelClass: Northamericanweb\Reviews\Models\Review
+nameFrom: review
+toolbar:
+    buttons: reorder_toolbar

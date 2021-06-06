@@ -1,0 +1,53 @@
+title = "Projects"
+url = "/projects"
+layout = "secondary"
+is_hidden = 0
+
+[builderList]
+modelClass = "Northamericanweb\Projects\Models\Project"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+
+
+<div class="bodycontent">
+  <div class="container">
+    <h1 class="page-title04 text-center">Our Projects</h1>
+    <hr class="hr"/>
+    <div class="row clearfix"  id="portfolio">
+		
+		{% for record in records %}
+			{% for images in record.proimg %}
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				
+				<div class="gallery-block"><a href="{{ images.path }}"><img src="{{ images.path }}"></a></div>
+			</div>
+			{% endfor %}
+		{% endfor %}
+   
+			
+				
+			
+			
+		
+			
+           
+     
+
+    
+  </div>
+</div>

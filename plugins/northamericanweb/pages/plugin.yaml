@@ -1,0 +1,11 @@
+plugin:
+    name: 'northamericanweb.pages::lang.plugin.name'
+    description: 'northamericanweb.pages::lang.plugin.description'
+    author: northamericanweb
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    Pages:
+        label: Pages
+        url: northamericanweb/pages/pages
+        icon: icon-file-text-o

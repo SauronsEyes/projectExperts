@@ -1,0 +1,69 @@
+1618589675a:1:{s:11:"enqmail.htm";a:9:{s:8:"fileName";s:11:"enqmail.htm";s:7:"content";s:1569:"title = "enqmail"
+url = "/enqmail"
+layout = "secondary"
+is_hidden = 0
+==
+<?php
+function onStart(){
+if (!empty($_POST) && isset($_POST["email"])) {
+  $to = 'todd@alltemperature.net';
+
+  $subject = 'New Enquiry Mail';
+
+  $headers = "From: " . strip_tags($_POST['email']) . "\r\n";
+//   $headers .= "Reply-To: " . strip_tags($_POST['email']) . "\r\n";
+//   $headers .= "CC: sales@zeromax.com\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+  $message = '<html><body>';
+  $message = '<h3>Message from the customer.</h3>';
+  $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
+  $message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . strip_tags($_POST['name']) . "</td></tr>";
+  $message .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($_POST['email']) . "</td></tr>";
+  $message .= "<tr><td><strong>Address:</strong> </td><td>" . strip_tags($_POST['address']) . "</td></tr>";
+   $message .= "<tr><td><strong>Phone:</strong> </td><td>" . strip_tags($_POST['phone']) . "</td></tr>";
+    $message .= "<tr><td><strong>Address:</strong> </td><td>" . strip_tags($_POST['address']) . "</td></tr>";
+     $message .= "<tr><td><strong>Service:</strong> </td><td>" . strip_tags($_POST['service']) . "</td></tr>";
+ 
+  $message .= "</table>";
+  $message .= "</body></html>";
+
+
+  mail($to, $subject, $message, $headers);
+
+  echo "<script>alert('Your Message been sent.');window.location.href='.\';</script>";
+}
+}
+?>
+==";s:5:"mtime";i:1618158970;s:6:"markup";s:0:"";s:4:"code";s:1476:"function onStart(){
+if (!empty($_POST) && isset($_POST["email"])) {
+  $to = 'todd@alltemperature.net';
+
+  $subject = 'New Enquiry Mail';
+
+  $headers = "From: " . strip_tags($_POST['email']) . "\r\n";
+//   $headers .= "Reply-To: " . strip_tags($_POST['email']) . "\r\n";
+//   $headers .= "CC: sales@zeromax.com\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+  $message = '<html><body>';
+  $message = '<h3>Message from the customer.</h3>';
+  $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
+  $message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . strip_tags($_POST['name']) . "</td></tr>";
+  $message .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($_POST['email']) . "</td></tr>";
+  $message .= "<tr><td><strong>Address:</strong> </td><td>" . strip_tags($_POST['address']) . "</td></tr>";
+   $message .= "<tr><td><strong>Phone:</strong> </td><td>" . strip_tags($_POST['phone']) . "</td></tr>";
+    $message .= "<tr><td><strong>Address:</strong> </td><td>" . strip_tags($_POST['address']) . "</td></tr>";
+     $message .= "<tr><td><strong>Service:</strong> </td><td>" . strip_tags($_POST['service']) . "</td></tr>";
+ 
+  $message .= "</table>";
+  $message .= "</body></html>";
+
+
+  mail($to, $subject, $message, $headers);
+
+  echo "<script>alert('Your Message been sent.');window.location.href='.\';</script>";
+}
+}";s:5:"title";s:7:"enqmail";s:3:"url";s:8:"/enqmail";s:6:"layout";s:9:"secondary";s:9:"is_hidden";s:1:"0";}}

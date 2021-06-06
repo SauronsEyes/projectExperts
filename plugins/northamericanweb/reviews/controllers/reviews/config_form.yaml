@@ -1,0 +1,11 @@
+name: Reviews
+modelClass: Northamericanweb\Reviews\Models\Review
+form: $/northamericanweb/reviews/models/review/fields.yaml
+defaultRedirect: northamericanweb/reviews/reviews
+create:
+    redirect: 'northamericanweb/reviews/reviews/update/:id'
+    redirectClose: northamericanweb/reviews/reviews
+update:
+    redirect: northamericanweb/reviews/reviews
+    redirectClose: northamericanweb/reviews/reviews
+preview: {  }

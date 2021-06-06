@@ -1,0 +1,54 @@
+[builderList]
+modelClass = "Northamericanweb\Services\Models\Service"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+<section class="fullwidth-section-two">
+    <div class="outer-box clearfix"> 
+      
+      <!--Right Column-->
+      <div class="right-column">
+        <div class="inner clearfix">
+          <div class="content">
+            <h2 class="page-title02">OUR SERVICES</h2>
+            <div class="text">Our goal is to create and maintain the highest level of customer service for all of our clients.  Project Experts is one of the leading property maintenance service provider. 
+  Project Experts specializes in residential  and commercial properties.  Project Experts’ handymen & tradesmen are 
+  conveniently available throughout Edmonton AB. You can refresh or refurbish your space, no matter the location of your place.  Call us today to book a free quote!</div>
+            <a href="{{ 'quote'|page }}" class="btn-style-three">Get Started Now</a> </div>
+        </div>
+      </div>
+      
+      <!--Left Column-->
+      <div class="left-column">
+        <div class="inner clearfix">
+          <div class="content"> 
+            <!--Services Block-->
+            {% for record in records %}
+            <div class="services-block">
+              <div class="inner-box">
+                <div class="icon-box"> <a href="{{ 'Services' | page }}\{{record.id}}"><img src="{{ record.servicon.path }}" alt="" style="max-width:100px;max-height:200px;object-fit:cover;"/></a></div>
+                <h3>{{ record.title }}</h3>
+                <div class="text">{{ record.description|striptags|slice(0,108) }}...<br>
+                  <a href="{{ 'Services' | page }}\{{record.id}}">Read More...</a></div>
+              </div>
+            </div>
+            {% endfor %}
+            
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

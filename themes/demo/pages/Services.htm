@@ -1,0 +1,51 @@
+title = "Services"
+url = "/services"
+layout = "secondary"
+is_hidden = 0
+
+[builderList]
+modelClass = "Northamericanweb\Services\Models\Service"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+
+<div class="bodycontent">
+<div class="container">
+    <h1 class="page-title04 text-center">Services We Provide</h1>
+    <hr class="hr"/>
+    <div class="row clearfix">
+    {% for record in records %}
+      <div class="col-md-4 col-sm-4">
+        <div class="servbox">
+        <div class="img-holder"><p><img src="{{ record.servimg.path }}" alt="" width="100%"></p> </div>
+        <div class="title">{{ record.title }}</div>    
+          
+          <div class="contentbox">
+          <p>{{ record.description|raw }}</p>
+        </div>
+        <div class="morebtn"><a href="services/{{ record.id }}">View More</a></div>
+        </div>
+      </div>
+      {% endfor %}
+     
+
+    </div>
+  
+   
+   
+  </div>
+</div>

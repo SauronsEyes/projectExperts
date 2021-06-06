@@ -1,0 +1,14 @@
+fields:
+    title:
+        label: 'Project Title'
+        span: full
+        type: text
+    proimg:
+        label: 'Project Image'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload

@@ -1,0 +1,11 @@
+name: Abouts
+modelClass: Northamericanweb\Abouts\Models\About
+form: $/northamericanweb/abouts/models/about/fields.yaml
+defaultRedirect: northamericanweb/abouts/abouts
+create:
+    redirect: 'northamericanweb/abouts/abouts/update/:id'
+    redirectClose: northamericanweb/abouts/abouts
+update:
+    redirect: northamericanweb/abouts/abouts
+    redirectClose: northamericanweb/abouts/abouts
+preview: {  }

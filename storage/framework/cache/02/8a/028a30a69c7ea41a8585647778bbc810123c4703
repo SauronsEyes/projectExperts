@@ -1,0 +1,63 @@
+1618589675a:1:{s:9:"pages.htm";a:10:{s:8:"fileName";s:9:"pages.htm";s:7:"content";s:858:"title = "Pages"
+url = "/pages/:id"
+layout = "secondary"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Northamericanweb\Pages\Models\Page"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+<div class="bodycontent">
+  <div class="container">
+    <h1 class="page-title04 text-center">{{ record.title }}</h1>
+    <hr class="hr"/>
+    <div class="row clearfix">
+      <div class="col">
+      
+        <img src="{{ record.pagepic.path }}" alt="" width="30%"  style="float:right;">
+      
+    
+       <p>
+        {{ record.description|raw }}
+ </p>
+      </div>
+      
+
+    </div>
+  
+   
+   
+  </div>
+</div>";s:5:"mtime";i:1618158051;s:6:"markup";s:592:"{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+<div class="bodycontent">
+  <div class="container">
+    <h1 class="page-title04 text-center">{{ record.title }}</h1>
+    <hr class="hr"/>
+    <div class="row clearfix">
+      <div class="col">
+      
+        <img src="{{ record.pagepic.path }}" alt="" width="30%"  style="float:right;">
+      
+    
+       <p>
+        {{ record.description|raw }}
+ </p>
+      </div>
+      
+
+    </div>
+  
+   
+   
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:5:"Pages";s:3:"url";s:10:"/pages/:id";s:6:"layout";s:9:"secondary";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:34:"Northamericanweb\Pages\Models\Page";s:15:"identifierValue";s:9:"{{ :id }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:16:"Record not found";}}}

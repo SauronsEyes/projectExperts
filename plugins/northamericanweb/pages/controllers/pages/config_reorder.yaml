@@ -1,0 +1,4 @@
+title: Pages
+modelClass: Northamericanweb\Pages\Models\Page
+toolbar:
+    buttons: reorder_toolbar
